@@ -1,0 +1,22 @@
+{
+    "name": "atcoder",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "atcoder",
+    "workspaceFolder": "/atcoder",
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "oderwat.indent-rainbow",
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "shardulm94.trailing-spaces"
+            ],
+            "settings": {
+                "editor.formatOnSave": true,
+                "editor.tabSize": 4
+            }
+        }
+    }
+}
