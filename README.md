@@ -16,7 +16,8 @@ $ git clone https://github.com/kurimochi/atcoder_on_docker
 Next, log in to AtCoder in your browser and press F12 to open DevTools. Then, go to `Application -> Cookies -> https://atcoder.jp` and copy the Value of the cookie named `REVEL_SESSION`.  
 The copied values are used for `online-judge-tools` and `atcoder-cli` logins. Therefore, copy `.devcontainer/src/cookie-template.jar` to `.devcontainer/secrets/cookie.jar` and `.devcontainer/src/session-template.json` to `. devcontainer/src/session-template.json` and replace `{Insert the copied value}` in each with the value you just copied.
 ```shell
-$ cp .devcontainer/src/cookie-template.jar .devcontainer/secrets
+$ cp .devcontainer/src/cookie-template.jar .devcontainer/secrets/cookie.jar
+$ cp .devcontainer/src/session-template.jar .devcontaier/secrets/session.json
 ```
 Go to `.devcontainer` and create a container.
 ```shell
