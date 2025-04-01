@@ -1,5 +1,5 @@
 # Test
-alias cpptest='g++ main.cpp && oj t -d ./tests'                  # C++
+alias cpptest='g++ main.cpp && oj t -d ./tests'                 # C++
 alias pypytest='oj t -c "pypy3 main.py" -d ./tests'             # PyPy3
 alias py3test='oj t -c "python3 main.py" -d ./tests'            # CPython
 
