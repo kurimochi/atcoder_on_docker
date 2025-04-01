@@ -14,7 +14,7 @@ Clone this repository to an arbitrary location.
 $ git clone https://github.com/kurimochi/atcoder_on_docker
 ```
 Next, log in to AtCoder in your browser and press F12 to open DevTools. Then, go to `Application -> Cookies -> https://atcoder.jp` and copy the Value of the cookie named `REVEL_SESSION`.  
-The copied values will be used later for `online-judge-tools` login. Therefore, copy `.devcontainer/src/cookie-template.jar` to `.devcontainer/secrets/cookie.jar` and replace `{Insert the copied value}` in the third line with the value you just copied.
+The copied values are used for `online-judge-tools` and `atcoder-cli` logins. Therefore, copy `.devcontainer/src/cookie-template.jar` to `.devcontainer/secrets/cookie.jar` and `.devcontainer/src/session-template.json` to `. devcontainer/src/session-template.json` and replace `{Insert the copied value}` in each with the value you just copied.
 ```shell
 $ cp .devcontainer/src/cookie-template.jar .devcontainer/secrets
 ```
@@ -33,7 +33,7 @@ $ docker compose up -d
 Install the `Dev Containers` extension in VSCode and attach it to the `atcoder` container from a remote tab.
 
 ### Download Test Data
-In the following, we will explain the procedure for actually solving the problem. First, go to `contest/` and download the test data for the problem. For example, the problem `abc001` can be downloaded as follows. You may be asked for a user name and password, but you can leave them blank.
+In the following, we will explain the procedure for actually solving the problem. First, go to `contest/` and download the test data for the problem. For example, the problem `abc001` can be downloaded as follows.
 ```shell
 $ acc new abc001
 ```
@@ -78,6 +78,7 @@ This repository consists of the following And the places marked with * are where
 │      │  .bashrc               *
 │      │  cookie-template.jar
 │      │  requirements.txt      *
+│      │  session-template.jar
 │      │  template.json
 │      │
 │      └─templates              *
