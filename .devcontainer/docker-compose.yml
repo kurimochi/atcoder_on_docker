@@ -7,3 +7,5 @@ services:
     tty: true
     volumes:
       - ../:/atcoder
+      - ./secrets/cookie.jar:/root/.local/share/online-judge-tools/cookie.jar
+      - ./secrets/session.json:/root/.config/atcoder-cli-nodejs/session.json
