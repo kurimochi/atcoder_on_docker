@@ -9,8 +9,6 @@ RUN apt update \
     && git clone https://github.com/atcoder/ac-library /root/ac-library \
     && apt clean && rm -rf /var/lib/apt/lists/* /tmp/requirements.txt
 
-COPY secrets/cookie.jar /root/.local/share/online-judge-tools/cookie.jar
-COPY secrets/session.json /root/.config/atcoder-cli-nodejs/session.json
 COPY src/templates/ /root/.config/atcoder-cli-nodejs/
 RUN acc config default-task-choice all && acc config default-template cpp
 
